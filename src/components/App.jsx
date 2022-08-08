@@ -1,16 +1,17 @@
+  import { UserMenu } from "./Task1/Container/UserMenu";
+  import { DataMenu } from "./Task2/Container/DataMenu";
+  import { FriendsMenu } from "./Task3/Container/FriendsMenu";
+  import { ContainerTrans } from "./Task4/ContainerTrans/ContainerTrans";
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <UserMenu />
+      <DataMenu />
+      <FriendsMenu />
+      <ContainerTrans />
+   
+    </>
+   
   );
 };
+
