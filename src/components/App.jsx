@@ -1,17 +1,16 @@
-  import { UserMenu } from "./Task1/Container/UserMenu";
-  import { DataMenu } from "./Task2/Container/DataMenu";
-  import { FriendsMenu } from "./Task3/Container/FriendsMenu";
-  import { ContainerTrans } from "./Task4/ContainerTrans/ContainerTrans";
-export const App = () => {
+  import { Profile } from "./Task1/Profile/Profile";
+  import { Statistics } from "./Task2/Statistics/Statistics";
+  import { FriendList } from "./Task3/FriendList/FriendList";
+  import { TransactionHistory } from "./Task4/TransactionHistory/TransactionHistory";
+
+  export const App = () => {
   return (
     <>
-      <UserMenu />
-      <DataMenu />
-      <FriendsMenu />
-      <ContainerTrans />
-   
+      <Profile />
+      <Statistics />
+      <FriendList />
+      <TransactionHistory />
     </>
-   
   );
 };
 

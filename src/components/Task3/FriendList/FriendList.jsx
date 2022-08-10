@@ -1,10 +1,10 @@
 import { Box } from 'components/theme/Box';
 import  friends  from '../../Data/friends.json';
-import { CardsUser } from "../CardUser/CardUser";
+import { FriendListItem } from "../FriendListItem/FriendListItem";
 
 
-export const FriendsMenu = () =>{
+export const FriendList = () =>{
     return <Box display="block" ml='auto' mr="auto" width="250px" mt='15px' backgroundColor='#fffdfd' >
-    <CardsUser friends={friends}/>
+        <FriendListItem friends={friends}/>
     </Box>
 }
