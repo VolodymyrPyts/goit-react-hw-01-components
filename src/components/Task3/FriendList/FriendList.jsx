@@ -1,10 +1,22 @@
 import { Box } from 'components/theme/Box';
-import  friends  from '../../Data/friends.json';
+
 import { FriendListItem } from "../FriendListItem/FriendListItem";
+import { ListFriend, ItemFriend} from "../FriendListItem/FriendListItem.styled";
 
 
-export const FriendList = () =>{
+export const FriendList = ({friends}) =>{
     return <Box display="block" ml='auto' mr="auto" width="250px" mt='15px' backgroundColor='#fffdfd' >
-        <FriendListItem friends={friends}/>
+       <ListFriend>
+        
+       {friends.map(({avatar, name, isOnline, id}) => (
+            <ItemFriend key={id}>
+             <FriendListItem 
+                avatar={avatar}
+                name={name} 
+                isOnline={isOnline}/>
+             </ItemFriend>
+       ))}
+       </ListFriend>
+               
     </Box>
 }

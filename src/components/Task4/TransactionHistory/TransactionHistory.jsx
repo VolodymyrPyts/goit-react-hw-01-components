@@ -1,11 +1,9 @@
 import { Box } from 'components/theme/Box';
 import PropTypes from 'prop-types';
 
-import  transactions  from '../../Data/transactions.json';
-
 import { TableBlock, BlockTabHead, RowTableStyle, ColorRow } from "../RowTrans/RowTrans.styled";
 
-export const TransactionHistory = ({type, amount, currency, id}) =>{
+export const TransactionHistory = ({transactions}) =>{
     return <Box display="block" ml='auto' mr="auto" width="500px" hight='250px'
                 mt='15px' backgroundColor='#fffdfd' >
         <TableBlock className="transaction-history">
@@ -17,15 +15,14 @@ export const TransactionHistory = ({type, amount, currency, id}) =>{
                 </tr>
             </thead >
             <tbody>
-                {transactions.map(transaction => {
-                const {type, amount, currency, id} = transaction;
-                
-            return   (<ColorRow key={id}>
+                {transactions.map(({type, amount, currency, id}) => (
+                                
+           <ColorRow key={id}>
                 <RowTableStyle>{type}</RowTableStyle>
                 <RowTableStyle>{amount}</RowTableStyle>
                 <RowTableStyle>{currency}</RowTableStyle>
-            </ColorRow>);
-            })}
+            </ColorRow>
+            ))}
             </tbody>  
         </TableBlock >
     </Box>
